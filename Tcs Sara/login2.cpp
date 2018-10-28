@@ -156,7 +156,7 @@ int AdminPowers()
                     //char str[]=fread();
                     if(strcmp(str1,name)==0)
                     {
-                        cout<<"Record found\n";
+                        cout<<"Record found and deleted successfully\n";
                         found=1;
                         strcpy(str1,"");
                         fscanf(fin,"%s",str1);
@@ -245,6 +245,8 @@ int login()
             {
                 cout<< "\nWrong Login Credentials\n";
             }
+            if(success)
+                return 1;
             success=0;
             break;
 
@@ -265,7 +267,10 @@ int login()
                 if(success==1)
                 {
                     cout << "\nSign Up successful\n";
-                    fprintf(fout,"%d\n",1024);// use a random fn to create a random no. here instead of 1024
+                    int roll=0;
+                    cout<<"\nEnter any roll no/Id no:"<<endl;
+                    cin>>roll;
+                    fprintf(fout,"%d\n",roll);// use a random fn to create a random no. here instead of 1024
                     fprintf(fout,"%s\n",name);
                     fprintf(fout,"%s\n",password);
                     return 1;
