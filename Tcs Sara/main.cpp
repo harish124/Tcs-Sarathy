@@ -14,7 +14,7 @@ int main()
     char gameName[100];
     if(login)
     {
-        getchar();
+        //getchar();
         while(1==1)
     {
         cout<< "\nPress:\n1:To enter game no.\n2:To enter game name:\nAny other no. to exit\n";
