@@ -1,0 +1,9 @@
+admin
+admin
+har
+12
+1024
+bas
+basword
+1023
+-1
